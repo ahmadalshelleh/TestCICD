@@ -33,14 +33,12 @@ jobs:
     needs: [continuous-integration]
     if: github.ref == 'refs/heads/main'
     steps:
-     # Step 1
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id:AKIAXIKXH5OI3LB6A4TJ
-          aws-secret-access-key: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
+          aws-access-key-id: AKIAXIKXH5OI3LB6A4TJ
+          aws-secret-access-key: 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
           aws-region: us-east-1
-     # Step 2
       - name: Create CodeDeploy Deployment
         id: deploy
         run: |
@@ -48,4 +46,4 @@ jobs:
             --application-name test1 \
             --deployment-group-name testgroup \
             --deployment-config-name CCodeDeployDefault.AllAtOnce \
-            --github-location repository=TestCICD,commitId=sha
+            --github-location repository=TestCICD,commitId=sha }}
