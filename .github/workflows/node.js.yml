@@ -46,4 +46,4 @@ jobs:
             --application-name test1 \
             --deployment-group-name testgroup \
             --deployment-config-name CCodeDeployDefault.AllAtOnce \
-            --github-location repository=TestCICD,commitId=sha }}
+            --github-location repository=TestCICD,commitId=sha
