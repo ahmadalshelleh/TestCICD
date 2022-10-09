@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
@@ -48,4 +47,4 @@ jobs:
             --application-name test1 \
             --deployment-group-name testgroup \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
-            --github-location repository=${{github.repository}},commitId=${{github.sha}}
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
